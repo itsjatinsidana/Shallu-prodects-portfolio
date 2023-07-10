@@ -1,0 +1,706 @@
+/*Styles for S.S. Textiles*/
+/*Designed By Hemant Dutta*/
+
+/*===Body===*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*Scroll Bar*/
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aa16e5;
+    transition: background-color 0.4s ease;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+}
+
+
+/*==Home Page==*/
+
+/*Navbar*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav .inner-cont, nav .outer-cont {
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav .outer-cont {
+    max-width: 1350px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav .inner-cont {
+    max-width: 1000px;
+}
+
+nav .fa-bars:hover {
+    color: #aa16e5;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 2rem;
+    z-index: 9;
+    transition: 0.7s ease;
+    color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+nav .brand {
+    font-size: 1.6em;
+}
+
+nav .inner-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .outer-cont ul {
+    width: 100%;
+    margin: 0 1em;
+}
+
+nav .outer-cont ul li {
+    display: inline-block;
+    margin: 0 0.7em;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+    font-weight: 600;
+    color: white;
+}
+
+nav a:hover {
+    color: #aa16e5;
+}
+
+nav .fa-bars {
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: right;
+}
+
+nav .menu {
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    height: 0;
+    opacity: 0;
+    transition: 0.7s cubic-bezier(.74, -0.03, .83, .67);
+    overflow-y: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+nav .menu #menu_logo {
+    width: 10em;
+}
+
+.menu ul {
+    margin: 1em auto;
+}
+
+.menu li {
+    margin: 1em 0;
+}
+
+.menu > div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 6em 1em 3em 1em;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.menu > div::-webkit-scrollbar {
+    display: none;
+}
+
+/*Javascript Classes*/
+.menu-open {
+    height: 100vh;
+    opacity: 1;
+}
+
+.navbar-active {
+    background-color: #111;
+    padding: 1em;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 800px) {
+    nav .inner-cont {
+        display: none;
+    }
+
+    nav .outer-cont {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*Intro Section*/
+.intro {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 1)), url("https://hemantdutta.github.io/ssTextilesPortofolio/assets/images/sst_main_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.intro .text > * {
+    flex: 1;
+}
+
+.intro .text h1 {
+    font-size: 8em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.intro .text p {
+    font-size: 2em;
+}
+
+.itha1 {
+    display: inline-block;
+    transform: translateY(110px);
+    opacity: 0;
+}
+
+.itpa1 {
+    display: inline;
+    opacity: 0;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 1091px) {
+    .intro .text {
+        flex-direction: column;
+        margin-top: 8rem;
+        row-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .intro .text h1 {
+        font-size: 20vw;
+        text-align: center;
+    }
+
+    .intro .text p {
+        text-align: justify;
+    }
+}
+
+/*Dyeing Section*/
+.dyeing {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dyeing .top-text {
+    text-align: center;
+}
+
+.dyeing .top-text h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.dyeing .image-cont {
+    background-image: url("https://hemantdutta.github.io/ssTextilesPortofolio/assets/images/dyeing_bg_sst.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 80vw;
+    border-radius: 20px;
+    margin-top: 2rem;
+    background-position: 0% 65%;
+}
+
+.dyeing .text {
+    margin-top: 4rem;
+    width: 80vw;
+    margin-bottom: 4rem;
+}
+
+.dyeing .text p {
+    text-align: justify;
+    font-size: 2vw;
+    color: white;
+}
+
+@media screen and (max-width: 991px) {
+    .dyeing .text p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .dyeing .text p {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .dyeing .text p {
+        font-size: 6vw;
+    }
+}
+
+/*Weaving Section*/
+.weaving {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("https://hemantdutta.github.io/ssTextilesPortofolio/assets/images/VID-20230219-WA0035.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    background-position: 50% 100%;
+}
+
+.weaving > * {
+    flex: 1;
+}
+
+.weaving .weBot {
+    background: rgba(87, 87, 87, 0.55);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.weaving .weBot p {
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 991px) {
+    .weaving .weBot p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .weaving .weBot p{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .weaving .weBot p {
+        font-size: 6vw;
+    }
+}
+
+
+.weaving .weTop h1 {
+    font-size: 6em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width: 1091px) {
+    .weaving {
+        flex-direction: column;
+    }
+
+    .weaving > * {
+        flex: 0;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .weaving .weTop h1 {
+        font-size: 15vw;
+    }
+}
+
+
+/*Finishing*/
+
+.finishing {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url("https://hemantdutta.github.io/ssTextilesPortofolio/assets/images/finishing_bg_sst.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+}
+
+.finishing .content > * {
+    flex: 1;
+}
+
+.finishing .content .fText {
+    height: 100vh;
+}
+
+.finishing .content .fText h1 {
+    font-size: 6em;
+}
+
+.finishing .content .fText .fpCont {
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+}
+
+.finishing .content .fText .fpCont p {
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 991px) {
+    .finishing .content .fText .fpCont p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .finishing .content .fText .fpCont p{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .finishing .content .fText .fpCont p {
+        font-size: 6vw;
+    }
+}
+
+.finishing .content .fImgCont .fimg {
+    height: 340px;
+    width: 240px;
+}
+
+@media screen and (max-width: 696px) {
+    .finishing .content .fText h1 {
+        font-size: 15vw;
+    }
+}
+
+@media screen and (max-width: 1091px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .fText {
+        align-items: center;
+    }
+}
+
+/*Footer*/
+.footer {
+    min-height: 50vh;
+    padding: 2rem 2rem 0rem 2rem;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+}
+
+.footer-cont {
+    display: grid;
+    /*place-items: center;*/
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 22px 29px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". .";
+    margin-bottom: 2rem;
+}
+
+.detMap {
+
+}
+
+.detMap iframe {
+
+}
+
+.contactCont ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.contactCont ul li span, .contactCont ul li span a {
+    transition: all 0.4s ease;
+    color: #aa16e5;
+    text-decoration: none;
+}
+
+.contactCont ul li span:hover, .contactCont ul li span a:hover {
+    color: #fff;
+}
+
+.quickList {
+    list-style-type: none;
+}
+
+.quickLinks .quickList li{
+    transition: all 0.2s ease;
+}
+
+.quickLinks .quickList li:hover{
+    transform: translateX(15px);
+}
+
+.quickLinks .quickList li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.quickLinks .quickList li a:hover {
+    color: #aa16e5;
+}
+
+.copyrightStatus {
+    width: 100%;
+}
+
+.copyrightStatus p a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.copyrightStatus p a:hover{
+    color: #aa16e5;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 899px) {
+
+    .footer {
+        min-height: max-content;
+    }
+
+    .footer-cont {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px 29px;
+        grid-auto-flow: row;
+        grid-template-areas:
+    "."
+    ".";
+    }
+}
+
+/*==Contact Page==*/
+
+.info-form {
+    width: 40vw;
+    border-radius: 20px;
+    background-color: #000;
+    padding: 1.5rem;
+}
+
+.info-form ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.info-form ul li span, .info-form ul li span a {
+    transition: all 0.4s ease;
+    color: #aa16e5;
+    text-decoration: none;
+}
+
+.info-form ul li span:hover, .info-form ul li span a:hover {
+    color: #fff;
+}
+
+.contact-sect {
+    margin-top: 9rem;
+}
+
+.contact-form {
+    width: 40vw;
+    border-radius: 20px;
+    background-color: #000;
+    padding: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+    .contact-form, .info-form {
+        width: 100%;
+    }
+}
+
+#head {
+    color: white;
+    transition: all 0.4s ease;
+}
+
+#head:hover {
+    color: #aa16e5;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField label {
+    color: white;
+    font-weight: bold;
+}
+
+.inputField input, textarea {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputField input, textarea {
+    background-color: transparent;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+    padding: 0.5rem;
+    color: #aa16e5;
+    transition: all 0.2s ease;
+}
+
+.inputField input:focus, textarea:focus {
+    border: 2px solid #aa16e5;
+    border-radius: 1rem;
+}
+
+/*==Gallery==*/
+.galText{
+    text-align: center;
+}
+
+.galText h1 {
+    font-size: 8em;
+}
+
+.galText h3 {
+    font-size: 4em;
+}
+
+@media screen and (max-width: 786px) {
+    .galText h1 {
+        font-size: 15vw;
+    }
+
+    .galText h3 {
+        font-size: 8vw;
+    }
+
+    .gal_img {
+        width: 80vw;
+    }
+}
+
+.photos {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("https://hemantdutta.github.io/ssTextilesPortofolio/assets/images/pg_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.gal_img {
+    height: 450px;
+    width: 450px;
+    padding: 1rem;
+    background-color: #000;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 786px) {
+    .galText h1 {
+        font-size: 15vw;
+    }
+
+    .galText h3 {
+        font-size: 8vw;
+    }
+
+    .gal_img {
+        width: 80vw;
+    }
+
+    .photo-grid row {
+        row-gap: 5rem;
+    }
+}
+
+.gal_img img {
+    object-fit: cover;
+    object-position: center;
+    width: 80%;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.gal_img img:hover {
+    width: 100%;
+}
